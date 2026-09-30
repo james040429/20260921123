@@ -7,11 +7,13 @@ public class FollowMouse3D : MonoBehaviour
     private Camera mainCamera;
     private Plane groundPlane;
 
+    public Vector3 _offset;
+
     void Start()
     {
         mainCamera = Camera.main;
         // y값이 0인 평면 설정
-        groundPlane = new Plane(Vector3.up, Vector3.zero);
+        groundPlane = new Plane(Vector3.up, _offset);
     }
 
     void Update()
@@ -31,7 +33,24 @@ public class FollowMouse3D : MonoBehaviour
         {
             Vector3 targetPoint = ray.GetPoint(rayDistance);
             // 오브젝트 위치 갱신
-            transform.position = targetPoint;
+            Vector3 pos = targetPoint;
+
+            float posX = Mathf.Clamp(pos.x, -22f, 22f);
+            float posZ = Mathf.Clamp(pos.z, -3f, 30f);
+
+            pos.x = posX;
+            pos.z = posZ;
+
+
+
+            transform.position = pos;
+
+
+
+
+
+
+
         }
     }
 }
