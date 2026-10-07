@@ -7,6 +7,7 @@ public class PlayerFire : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePos;
 
+
     [Header("발사 설정")]
     public float fireInterval = 0.2f; // 발사 간격 (초 단위)
     private bool isFiring = false;       // 현재 자동 발사 중인지 여부
@@ -14,7 +15,7 @@ public class PlayerFire : MonoBehaviour
 
     void Update()
     {
-        
+
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             ToggleFire();

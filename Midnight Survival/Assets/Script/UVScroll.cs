@@ -1,19 +1,24 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class UVScroll : MonoBehaviour
+public class Uvscroll : MonoBehaviour
 {
-    public RawImage rawImage;
-    public Vector2 scrollSpeed = new Vector2(0.1f, 0f);
+    Material _mat;
 
+    public float _speed = 0.05f;
+    //------------------------
+    void Awake()
+    {
+        _mat = GetComponent<Renderer>().material;
+    }
+    //------------------------
     void Update()
     {
-        if (rawImage != null)
-        {
-            rawImage.uvRect = new Rect(
-                rawImage.uvRect.position + scrollSpeed * Time.deltaTime,
-                rawImage.uvRect.size
-            );
-        }
+        Vector2 ofs = _mat.mainTextureOffset;
+        ofs.y += _speed * Time.deltaTime;
+
+        _mat.mainTextureOffset = ofs;
     }
-}
+    //------------------------
+
+}// public class Sky : MonoBehaviour
+ //==========================================================

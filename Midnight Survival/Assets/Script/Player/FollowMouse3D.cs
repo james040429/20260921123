@@ -35,8 +35,8 @@ public class FollowMouse3D : MonoBehaviour
             // 오브젝트 위치 갱신
             Vector3 pos = targetPoint;
 
-            float posX = Mathf.Clamp(pos.x, -22f, 22f);
-            float posZ = Mathf.Clamp(pos.z, -3f, 30f);
+            float posX = Mathf.Clamp(pos.x, -46f, 46f);
+            float posZ = Mathf.Clamp(pos.z, -22, 22f);
 
             pos.x = posX;
             pos.z = posZ;
