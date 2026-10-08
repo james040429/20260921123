@@ -1,29 +1,27 @@
 using System;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
-    public float lifeTime = 20f;
 
     void Start()
     {
-        Destroy(gameObject, lifeTime);
         currentHealth = maxHealth;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("EnemyBullet"))
         {
             // 🔥 수정: 부딪힌 총알 오브젝트에서 Bullet 스크립트 컴포넌트를 가져옵니다.
-            Bullet bullet = other.GetComponent<Bullet>();
+            EnemyBullet Enemybullet = other.GetComponent<EnemyBullet>();
 
             // 스크립트가 정상적으로 들어있다면 그 총알의 damage 값만큼 데미지를 줍니다.
-            if (bullet != null)
+            if (Enemybullet != null)
             {
-                TakeDamage((int)bullet.damage);
+                TakeDamage((int)Enemybullet.damage);
             }
             else
             {
@@ -39,7 +37,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log($"적 체력: {currentHealth} (받은 데미지: {damage})");
+        Debug.Log($"체력: {currentHealth} (받은 데미지: {damage})");
 
         if (currentHealth <= 0)
         {
@@ -49,7 +47,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("적이 사망했습니다.");
+        Debug.Log("사망했습니다.");
         Destroy(gameObject);
     }
 }

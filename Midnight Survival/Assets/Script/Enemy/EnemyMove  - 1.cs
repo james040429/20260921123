@@ -10,7 +10,7 @@ public class EnemyMove : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        // [핵심] 현재 적 위치에서 가장 가까운 NavMesh 바닥을 찾습니다.
+        // [최초 1회 실행] 현재 적 위치에서 가장 가까운 NavMesh 바닥을 찾습니다.
         NavMeshHit hit;
         if (NavMesh.SamplePosition(transform.position, out hit, 5.0f, NavMesh.AllAreas))
         {
@@ -20,6 +20,13 @@ public class EnemyMove : MonoBehaviour
         else
         {
             Debug.LogError($"{gameObject.name} 주변에 NavMesh 바닥을 찾을 수 없습니다! Bake 상태를 확인하세요.");
+        }
+
+        // 💡 추가 팁: 하이어라키(Hierarchy)에 있는 플레이어를 자동으로 찾도록 설정
+        if (player == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null) player = playerObj.transform;
         }
     }
 

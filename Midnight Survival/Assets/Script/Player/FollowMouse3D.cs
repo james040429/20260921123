@@ -41,14 +41,7 @@ public class FollowMouse3D : MonoBehaviour
             pos.x = posX;
             pos.z = posZ;
 
-
-
             transform.position = pos;
-
-
-
-
-
 
 
         }
