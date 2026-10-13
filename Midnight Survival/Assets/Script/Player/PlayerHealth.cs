@@ -34,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -49,5 +50,6 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("사망했습니다.");
         Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 100
-  lifeTime: 10
+  lifeTime: 20
 --- !u!54 &34581823313420392
 Rigidbody:
   m_ObjectHideFlags: 0

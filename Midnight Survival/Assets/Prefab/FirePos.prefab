@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFire
   bulletPrefab: {fileID: 4574302882148346751, guid: c397c3b5d2356e04d8e5f643802f3f51, type: 3}
   firePos: {fileID: 911307960734822753}
-  fireInterval: 0.2
+  fireInterval: 0.4
