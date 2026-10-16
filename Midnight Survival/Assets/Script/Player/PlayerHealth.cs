@@ -11,6 +11,9 @@ public class PlayerHealth : MonoBehaviour
     [Header("UI 연동")]
     public Slider hpSlider; // 🔥 추가: 인스펙터창에서 슬라이더를 연결할 변수
 
+
+    bool _isInvincible = false;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -29,13 +32,17 @@ public class PlayerHealth : MonoBehaviour
         {
             EnemyBullet Enemybullet = other.GetComponent<EnemyBullet>();
 
-            if (Enemybullet != null)
+    
+            if(_isInvincible == false)
             {
-                TakeDamage((int)Enemybullet.damage);
-            }
-            else
-            {
-                TakeDamage(10);
+                if (Enemybullet != null)
+                {
+                    TakeDamage((int)Enemybullet.damage);
+                }
+                else
+                {
+                    TakeDamage(10);
+                }
             }
 
             Destroy(other.gameObject);
