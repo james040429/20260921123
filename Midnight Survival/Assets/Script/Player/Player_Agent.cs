@@ -1,19 +1,21 @@
+
 using UnityEngine;
 
 public class Player_Agent : MonoBehaviour
 {
     [SerializeField] PlayerHealth _health;
+    public PlayerHealth _Health => _health;
+    [SerializeField] PlayerController _playerController;
+    public PlayerController _PlayerCtrl => _playerController;
     [SerializeField] PlayerFire _fire;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if(other.TryGetComponent<ICollide>(out ICollide iCollide ))
+        {
+            iCollide.OnCollide(this);
+        }
     }
 }

@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 3842823569381366463}
   - component: {fileID: 5270814893320152084}
   - component: {fileID: 2877923891048331940}
+  - component: {fileID: -1971130883657623621}
+  - component: {fileID: -3163956712441536248}
   m_Layer: 0
   m_Name: Enemy - 2
   m_TagString: Untagged
@@ -33,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.68046, y: 0.00001, z: 11.48759}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 911307960734822753}
@@ -130,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMove
   player: {fileID: 0}
+  damageToPlayer: 15
 --- !u!114 &3842823569381366463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +190,32 @@ MonoBehaviour:
   backwardSpeed: 5
   minX: -46
   maxX: 46
+--- !u!114 &-1971130883657623621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8583045505197519431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fe212afdf29074db15520eb10d69c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDropItem
+  shieldItemPrefab: {fileID: 1552967156041283352, guid: 2a738d668dd82504bb3a653e47848ce9, type: 3}
+  dropProbability: 100
+--- !u!114 &-3163956712441536248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8583045505197519431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c45e5bc5e7f5004593ec07a90762109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_Agent
 --- !u!1 &8691164334694153842
 GameObject:
   m_ObjectHideFlags: 0

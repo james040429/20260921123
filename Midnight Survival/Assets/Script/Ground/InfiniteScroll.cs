@@ -14,27 +14,32 @@ public class InfiniteScroll : MonoBehaviour
 
     void Start()
     {
-        // 땅이 3개고 길이가 20이라면 총 길이는 60
+        // 땅의 총 길이 계산
         totalLength = groundLength * grounds.Length;
 
-        // 화면 밖 뒤쪽으로 넘어가는 기준점 계산 (첫 번째 땅의 시작점보다 뒤)
-        // 안전하게 땅 한 칸 크기만큼 뒤로 지정합니다.
+        // 기준점은 첫 번째 땅의 위치보다 딱 한 칸 뒤로 설정합니다.
         reSpawnZ = -groundLength;
     }
 
     void Update()
     {
-        // 1. 모든 땅을 매 프레임마다 뒤로(Z축 마이너스 방향) 이동시킵니다.
+        // 1. 모든 땅을 매 프레임마다 뒤로 이동시킵니다.
         for (int i = 0; i < grounds.Length; i++)
         {
             grounds[i].transform.Translate(Vector3.back * scrollSpeed * Time.deltaTime);
 
-            // 2. 만약 어떤 땅이 플레이어 뒤쪽 한계선(reSpawnZ)보다 더 뒤로 넘어갔다면?
+            // 2. 땅이 한계선보다 뒤로 넘어갔을 때
             if (grounds[i].transform.position.z <= reSpawnZ)
             {
-                // 현재 위치에서 '전체 길이'만큼 앞(Z축 플러스 방향)으로 순간이동시킵니다.
                 Vector3 newPos = grounds[i].transform.position;
-                newPos.z += totalLength;
+
+                // [핵심 보정] 한계선(reSpawnZ)을 얼마나 초과했는지 오차를 구합니다.
+                float overshoot = reSpawnZ - newPos.z;
+
+                // 단순히 totalLength를 더하는 것이 아니라, 
+                // 정확한 리스폰 위치에서 오버슈트된 오차만큼을 빼주어 정밀하게 맞춥니다.
+                newPos.z = reSpawnZ + totalLength - overshoot;
+
                 grounds[i].transform.position = newPos;
             }
         }

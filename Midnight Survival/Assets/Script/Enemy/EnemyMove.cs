@@ -43,20 +43,5 @@ public class EnemyMove : MonoBehaviour
     }
 
     // 🔥 플레이어와 접촉했을 때 실행되는 충돌 감지 로직
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            // 1. 플레이어에게 데미지 주기 (PlayerHealth 컴포넌트 사용)
-            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damageToPlayer);
-            }
-
-            // 2. 적 자신은 즉시 소멸 (체력 계산 없이 바로 파괴)
-            Debug.Log($"{gameObject.name}가 플레이어와 충돌하여 자폭(소멸)했습니다.");
-            Destroy(gameObject);
-        }
-    }
+  
 }

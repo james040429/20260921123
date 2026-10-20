@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
+        // 일정 시간이 지나면 자동으로 파괴
         Destroy(gameObject, lifeTime);
         currentHealth = maxHealth;
     }
@@ -17,7 +18,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
-            // 🔥 수정: 부딪힌 총알 오브젝트에서 Bullet 스크립트 컴포넌트를 가져옵니다.
+            // 부딪힌 총알 오브젝트에서 Bullet 스크립트 컴포넌트를 가져옵니다.
             Bullet bullet = other.GetComponent<Bullet>();
 
             // 스크립트가 정상적으로 들어있다면 그 총알의 damage 값만큼 데미지를 줍니다.
@@ -54,6 +55,8 @@ public class EnemyHealth : MonoBehaviour
             GameManager.Instance.AddKill();
         }
         Debug.Log("적이 사망했습니다.");
+
+        // 적 오브젝트 파괴 (아이템 드롭 기능 삭제됨)
         Destroy(gameObject);
     }
 }

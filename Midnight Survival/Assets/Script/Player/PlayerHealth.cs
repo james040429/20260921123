@@ -26,28 +26,6 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("EnemyBullet"))
-        {
-            EnemyBullet Enemybullet = other.GetComponent<EnemyBullet>();
-
-    
-            if(_isInvincible == false)
-            {
-                if (Enemybullet != null)
-                {
-                    TakeDamage((int)Enemybullet.damage);
-                }
-                else
-                {
-                    TakeDamage(10);
-                }
-            }
-
-            Destroy(other.gameObject);
-        }
-    }
 
     public void TakeDamage(int damage)
     {
