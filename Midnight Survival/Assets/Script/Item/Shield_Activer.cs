@@ -1,24 +1,20 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
+public class Shield_Activer : MonoBehaviour
 {
     [Header("Shield Settings")]
     public bool hasShield = false;         // 현재 보호막 보유 여부
     public float shieldDuration = 5f;      // 보호막 지속 시간 (5초)
     public GameObject shieldVisualPrefab;  // 플레이어 자식으로 붙어있는 구체(Sphere) 보호막 오브젝트
-
+    GameObject _shieldInst;
     private Coroutine shieldTimerCoroutine;
 
     [SerializeField] PlayerHealth _playerHealth;
 
     private void Start()
-    {
-        // 시작할 때는 보호막을 꺼둡니다.
-        if (shieldVisualPrefab != null)
-        {
-            shieldVisualPrefab.SetActive(false);
-        }
+    {  
+        
     }
 
     // Shield 아이템을 먹었을 때 호출되는 함수
@@ -26,9 +22,13 @@ public class PlayerController : MonoBehaviour
     {
         hasShield = true;
 
-        if (shieldVisualPrefab != null)
+        if (_shieldInst == null)
         {
-            shieldVisualPrefab.SetActive(true);
+            _shieldInst = Instantiate(shieldVisualPrefab);
+            _shieldInst.transform.SetParent(transform);
+            _shieldInst.transform.localPosition = Vector3.zero;
+            Destroy_Eventer destroyer = _shieldInst.GetComponent<Destroy_Eventer>();
+            destroyer._onDestroy.AddListener(DeactivateShield);
         }
 
         // 이미 돌고 있는 타이머가 있다면 초기화 (시간 연장)
@@ -51,9 +51,9 @@ public class PlayerController : MonoBehaviour
     {
         hasShield = false;
 
-        if (shieldVisualPrefab != null)
+        if (_shieldInst != null)
         {
-            shieldVisualPrefab.SetActive(false);
+            Destroy(_shieldInst);
         }
 
         if (shieldTimerCoroutine != null)

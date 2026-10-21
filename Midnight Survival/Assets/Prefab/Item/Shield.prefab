@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 6882727113255616392}
   - component: {fileID: 6029960158904636453}
   - component: {fileID: 8999156573140663698}
+  - component: {fileID: 1101072347333641342}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5276146023395112655
 Transform:
   m_ObjectHideFlags: 0
@@ -112,3 +113,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1101072347333641342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552967156041283352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098d02c8c8d997641811d4d57c403e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Destroy_Eventer
+  _onDestroy:
+    m_PersistentCalls:
+      m_Calls: []

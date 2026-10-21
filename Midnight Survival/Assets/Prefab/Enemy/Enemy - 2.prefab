@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c45e5bc5e7f5004593ec07a90762109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Agent
+  _enemyhealth: {fileID: 0}
 --- !u!1 &8691164334694153842
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,4 +263,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFire
   bulletPrefab: {fileID: 2213760340710178853, guid: 161a1c8c6e976524fbb2188c21f546d3, type: 3}
   firePos: {fileID: 911307960734822753}
-  fireInterval: 0.5
+  fireInterval: 2

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Shield : MonoBehaviour,ICollide
+public class Item_Shield : MonoBehaviour,ICollide
 {
     [Header("Item Life Time")]
     public float itemLifeTime = 5f; // 아이템 유지 시간 (5초)
@@ -14,7 +14,7 @@ public class Shield : MonoBehaviour,ICollide
     public void OnCollide(Player_Agent playerAgent)
     {
         // 플레이어의 주요 로직을 담당하는 PlayerController 컴포넌트를 가져옴
-        PlayerController player = playerAgent._PlayerCtrl;
+        Shield_Activer player = playerAgent._Shield;
 
         if (player != null)
         {
@@ -28,5 +28,4 @@ public class Shield : MonoBehaviour,ICollide
             Debug.LogError("부딪힌 오브젝트에 PlayerController 스크립트가 없습니다! 컴포넌트를 확인해주세요.");
         }
     }
-
 }

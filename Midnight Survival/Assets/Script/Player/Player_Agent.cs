@@ -5,9 +5,8 @@ public class Player_Agent : MonoBehaviour
 {
     [SerializeField] PlayerHealth _health;
     public PlayerHealth _Health => _health;
-    [SerializeField] PlayerController _playerController;
-    public PlayerController _PlayerCtrl => _playerController;
-    [SerializeField] PlayerFire _fire;
+    [SerializeField] Shield_Activer _shieldActiver;
+    public Shield_Activer _Shield => _shieldActiver;
 
 
 

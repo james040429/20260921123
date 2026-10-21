@@ -12,8 +12,6 @@ public class PlayerHealth : MonoBehaviour
     public Slider hpSlider; // 🔥 추가: 인스펙터창에서 슬라이더를 연결할 변수
 
 
-    bool _isInvincible = false;
-
     void Start()
     {
         currentHealth = maxHealth;
