@@ -56,6 +56,14 @@ public class EnemyHealth : MonoBehaviour
         }
         Debug.Log("적이 사망했습니다.");
 
+        EnemyDropItem dropSystem = GetComponent<EnemyDropItem>();
+        if (dropSystem != null)
+        {
+            dropSystem.DropShieldItem();
+        }
+
+        // 2. 그 뒤에 적 오브젝트 삭제
+        Destroy(gameObject);
         // 적 오브젝트 파괴 (아이템 드롭 기능 삭제됨)
         Destroy(gameObject);
     }
