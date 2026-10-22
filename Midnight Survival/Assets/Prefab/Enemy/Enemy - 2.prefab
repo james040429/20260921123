@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fe212afdf29074db15520eb10d69c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDropItem
-  shieldItemPrefab: {fileID: 1552967156041283352, guid: 2a738d668dd82504bb3a653e47848ce9, type: 3}
+  shieldItemPrefab: {fileID: 7256529219899272767, guid: 4c26a231cfe52104fac2b643b880c711, type: 3}
   dropProbability: 100
 --- !u!114 &-3163956712441536248
 MonoBehaviour:

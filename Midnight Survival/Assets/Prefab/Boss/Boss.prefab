@@ -60,9 +60,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2901350454798811120, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2204986918633794360, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -683859399858032816, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
       propertyPath: m_TagString
@@ -126,6 +142,10 @@ PrefabInstance:
     - target: {fileID: 2822755404070940665, guid: 9765cbc44db39354980023e3e3ab9274, type: 3}
       propertyPath: m_Name
       value: BossFirePos (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822755404070940665, guid: 9765cbc44db39354980023e3e3ab9274, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3528479190730278241, guid: 9765cbc44db39354980023e3e3ab9274, type: 3}
       propertyPath: bulletPrefab
@@ -215,6 +235,10 @@ PrefabInstance:
     - target: {fileID: 2822755404070940665, guid: 9765cbc44db39354980023e3e3ab9274, type: 3}
       propertyPath: m_Name
       value: BossFirePos
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822755404070940665, guid: 9765cbc44db39354980023e3e3ab9274, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3528479190730278241, guid: 9765cbc44db39354980023e3e3ab9274, type: 3}
       propertyPath: bulletPrefab

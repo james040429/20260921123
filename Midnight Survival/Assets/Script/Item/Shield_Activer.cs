@@ -17,7 +17,7 @@ public class Shield_Activer : MonoBehaviour
         
     }
 
-    // Shield 아이템을 먹었을 때 호출되는 함수
+    // Shield 아이템을 먹었을 때 호출되는 함수 (플레이어 따라가는)
     public void ActivateShield()
     {
         hasShield = true;

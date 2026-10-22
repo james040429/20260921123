@@ -16,6 +16,7 @@ public class Destroy_Eventer : MonoBehaviour
         if ((targetLayerMask & (1 << other.gameObject.layer)) != 0)
         {
             Destroy(gameObject);
+            Destroy(other.gameObject);
 
         }
     }

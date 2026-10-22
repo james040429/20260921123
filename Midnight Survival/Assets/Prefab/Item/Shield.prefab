@@ -128,3 +128,6 @@ MonoBehaviour:
   _onDestroy:
     m_PersistentCalls:
       m_Calls: []
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 384

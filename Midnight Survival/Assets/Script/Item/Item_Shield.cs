@@ -3,11 +3,11 @@ using UnityEngine;
 public class Item_Shield : MonoBehaviour,ICollide
 {
     [Header("Item Life Time")]
-    public float itemLifeTime = 5f; // 아이템 유지 시간 (5초)
+    public float itemLifeTime = 7f; // 아이템 유지 시간 (7초)
 
     private void Start()
     {
-        // 생성되자마자 itemLifeTime(5초) 후에 사라지도록 설정
+        // 생성되자마자 itemLifeTime(7초) 후에 사라지도록 설정
         Destroy(gameObject, itemLifeTime);
     }
 
