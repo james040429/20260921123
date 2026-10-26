@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public float speed = 20f; // 총알 속도
-    public float lifeTime = 5f; // 생존 시간 (3초 뒤 자동 파괴)
+    public float lifeTime = 15f; // 생존 시간 (3초 뒤 자동 파괴)
     public float damage = 13f;
 
     void Start()

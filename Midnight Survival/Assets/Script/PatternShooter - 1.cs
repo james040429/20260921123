@@ -7,7 +7,7 @@ public class PatternShooter : MonoBehaviour
     [Header("발사 설정")]
     public GameObject bulletPrefab;
     public Transform[] firePoints;
-    public float fireInterval = 3.0f; // 3초마다 패턴 전환 발사
+    public float fireInterval = 2.5f; // 3초마다 패턴 전환 발사
 
     [Header("패턴 1: 부채꼴 설정 (한 번에 발사)")]
     public int fanBulletCount = 9;

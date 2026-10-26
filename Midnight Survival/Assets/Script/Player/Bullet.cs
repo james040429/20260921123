@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 20f; // 총알 속도
-    public float lifeTime = 3f; // 생존 시간 (3초 뒤 자동 파괴)
-    public float damage = 10f;
+    public float speed = 100f; // 총알 속도
+    public float lifeTime = 10f; // 생존 시간 (3초 뒤 자동 파괴)
+    public float damage = 20f;
 
     void Start()
     {
