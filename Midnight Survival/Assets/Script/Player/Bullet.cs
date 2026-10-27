@@ -17,4 +17,20 @@ public class Bullet : MonoBehaviour
         // 매 프레임마다 전방(Z축)으로 이동
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Enemy_Agent enemy = other.GetComponent<Enemy_Agent>();
+        if (enemy._EnemyHealth != null)
+        {
+            enemy._EnemyHealth.TakeDamage(10); // EnemyHealth 10 감소
+        }
+
+        Destroy(gameObject);
+    }
+
 }
+
+
+
+

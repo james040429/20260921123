@@ -18,8 +18,8 @@ public class FollowMouse3D : MonoBehaviour
     [Header("이동 제한 범위 (Min / Max)")]
     [SerializeField] private float minX = -85f;
     [SerializeField] private float maxX = 85f;
-    [SerializeField] private float minZ = -26f;
-    [SerializeField] private float maxZ = 120f;
+    [SerializeField] private float minZ = -660f;
+    [SerializeField] private float maxZ = 66f;
 
     // FixedUpdate에서 사용하기 위해 마우스 목표 지점을 저장하는 변수
     private Vector3 targetPosition;
