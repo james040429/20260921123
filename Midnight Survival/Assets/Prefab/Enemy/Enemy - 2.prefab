@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2877923891048331940}
   - component: {fileID: -1971130883657623621}
   - component: {fileID: -3163956712441536248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy - 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,10 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ab9fa892f267a548a9361f1bdac6d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SineMove
-  horizontalSpeed: 20
+  horizontalSpeed: 40
   backwardSpeed: 5
-  minX: -46
-  maxX: 46
+  minX: -80
+  maxX: 80
 --- !u!114 &-1971130883657623621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c45e5bc5e7f5004593ec07a90762109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Agent
-  _enemyhealth: {fileID: 0}
+  _enemyhealth: {fileID: 3842823569381366463}
 --- !u!1 &8691164334694153842
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 911307960734822753}
   - component: {fileID: 177405807677094832}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: EnemyFirePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

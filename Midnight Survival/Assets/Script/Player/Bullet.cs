@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Enemy_Agent enemy = other.GetComponent<Enemy_Agent>();
-        if (enemy._EnemyHealth != null)
+        if (enemy != null && enemy._EnemyHealth != null)
         {
             enemy._EnemyHealth.TakeDamage(10); // EnemyHealth 10 감소
         }

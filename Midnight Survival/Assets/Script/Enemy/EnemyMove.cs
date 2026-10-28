@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class EnemyMove : MonoBehaviour
 {
-    public Transform player;
+    public Transform Player;
     private NavMeshAgent agent;
 
     [Header("접촉 데미지 설정")]
@@ -26,19 +26,19 @@ public class EnemyMove : MonoBehaviour
         }
 
         // 💡 추가 팁: 하이어라키(Hierarchy)에 있는 플레이어를 자동으로 찾도록 설정
-        if (player == null)
+        if (Player == null)
         {
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-            if (playerObj != null) player = playerObj.transform;
+            if (playerObj != null) Player = playerObj.transform;
         }
     }
 
     void Update()
     {
         // 에이전트가 활성화되어 있고, 바닥(NavMesh) 위에 정상적으로 있을 때만 목적지 설정
-        if (player != null && agent.isActiveAndEnabled && agent.isOnNavMesh)
+        if (Player != null && agent.isActiveAndEnabled && agent.isOnNavMesh)
         {
-            agent.SetDestination(player.position);
+            agent.SetDestination(Player.position);
         }
     }
 

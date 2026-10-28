@@ -3,13 +3,13 @@ using UnityEngine;
 public class SineMove : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [SerializeField] private float horizontalSpeed = 4.0f; // 좌우 이동 속도
-    [SerializeField] private float backwardSpeed = 3.0f;   // 뒤로 나아가는 속도
+    [SerializeField] private float horizontalSpeed = 40.0f; // 좌우 이동 속도
+    [SerializeField] private float backwardSpeed = 8.0f;   // 뒤로 나아가는 속도
 
     [Header("Plane Boundaries")]
     // Plane의 좌우 한계값 (이 범위를 벗어나면 반대로 튕깁니다)
-    [SerializeField] private float minX = -46.0f;
-    [SerializeField] private float maxX = 46.0f;
+    [SerializeField] private float minX = -80.0f;
+    [SerializeField] private float maxX = 80.0f;
 
     private bool isMovingRight = true; // 현재 오른쪽으로 이동 중인지 여부
 
