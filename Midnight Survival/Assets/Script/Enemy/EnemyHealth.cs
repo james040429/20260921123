@@ -5,7 +5,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
-    public float lifeTime = 20f;
+    public float lifeTime = 60f;
 
     void Start()
     {

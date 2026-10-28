@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ac8145057aa5640990e426763ffad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMove
-  player: {fileID: 0}
+  Player: {fileID: 0}
   damageToPlayer: 15
 --- !u!114 &3842823569381366463
 MonoBehaviour:
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 100
-  lifeTime: 20
+  lifeTime: 60
 --- !u!54 &5270814893320152084
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SineMove
   horizontalSpeed: 40
-  backwardSpeed: 5
+  backwardSpeed: 30
   minX: -80
   maxX: 80
 --- !u!114 &-1971130883657623621

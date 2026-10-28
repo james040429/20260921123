@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d1fdb8e44b28da34d9e922cca0bc740e, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -292,6 +292,10 @@ PrefabInstance:
     - target: {fileID: 2723543232620707280, guid: a650abb2a3dc55b47abb6a0fc5575031, type: 3}
       propertyPath: m_Name
       value: Demo_Objects - 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723543232620707280, guid: a650abb2a3dc55b47abb6a0fc5575031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -662,7 +666,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 206683891627964156, guid: fb30f87141c56bc47bf4a09d3f9b4b24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 206683891627964156, guid: fb30f87141c56bc47bf4a09d3f9b4b24, type: 3}
       propertyPath: m_LocalPosition.y
@@ -670,7 +674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 206683891627964156, guid: fb30f87141c56bc47bf4a09d3f9b4b24, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -477.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 206683891627964156, guid: fb30f87141c56bc47bf4a09d3f9b4b24, type: 3}
       propertyPath: m_LocalRotation.w
@@ -703,6 +707,10 @@ PrefabInstance:
     - target: {fileID: 1531453874124436459, guid: fb30f87141c56bc47bf4a09d3f9b4b24, type: 3}
       propertyPath: m_Name
       value: EnemySpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531453874124436459, guid: fb30f87141c56bc47bf4a09d3f9b4b24, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1593648450585699729, guid: fb30f87141c56bc47bf4a09d3f9b4b24, type: 3}
       propertyPath: spawnRangeX
@@ -1143,6 +1151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Demo_Objects - 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2723543232620707280, guid: a650abb2a3dc55b47abb6a0fc5575031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1500,6 +1512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Demo_Objects - 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2723543232620707280, guid: a650abb2a3dc55b47abb6a0fc5575031, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1596,6 +1612,10 @@ PrefabInstance:
     - target: {fileID: 9025435444988080512, guid: c4cc3cc9ac499864f882426702a19b05, type: 3}
       propertyPath: m_Name
       value: Whitish Fog
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025435444988080512, guid: c4cc3cc9ac499864f882426702a19b05, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9025435444988080515, guid: c4cc3cc9ac499864f882426702a19b05, type: 3}
       propertyPath: m_LocalScale.x
@@ -1802,7 +1822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1423627907150594846, guid: 9912ce2351d0d734e878530361814e23, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1768347460402092452, guid: 9912ce2351d0d734e878530361814e23, type: 3}
       propertyPath: m_LocalScale.x
@@ -1891,7 +1911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3267181742843249278, guid: ae50c50dddb04e04ca7d1a54a3f1319a, type: 3}
       propertyPath: m_LocalScale.z
-      value: -20
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3267181742843249278, guid: ae50c50dddb04e04ca7d1a54a3f1319a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1903,7 +1923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3267181742843249278, guid: ae50c50dddb04e04ca7d1a54a3f1319a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -571.8
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 3267181742843249278, guid: ae50c50dddb04e04ca7d1a54a3f1319a, type: 3}
       propertyPath: m_LocalRotation.w

@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 2029029133476638921}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 1, z: 63.5}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 100
-  lifeTime: 20
+  lifeTime: 60
 --- !u!54 &34581823313420392
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDropItem
   shieldItemPrefab: {fileID: 7256529219899272767, guid: 4c26a231cfe52104fac2b643b880c711, type: 3}
-  dropProbability: 5
+  dropProbability: 100
 --- !u!114 &-5854836420327757473
 MonoBehaviour:
   m_ObjectHideFlags: 0
