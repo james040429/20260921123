@@ -818,11 +818,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1186219569}
   - component: {fileID: 1186219571}
-  - component: {fileID: 1186219565}
   - component: {fileID: 1186219570}
-  - component: {fileID: 1186219574}
+  - component: {fileID: 1186219565}
   - component: {fileID: 1186219573}
   - component: {fileID: 1186219575}
+  - component: {fileID: 1186219574}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -847,7 +847,7 @@ MonoBehaviour:
   minX: -85
   maxX: 85
   minZ: -650
-  maxZ: -470
+  maxZ: -200
 --- !u!4 &1186219569
 Transform:
   m_ObjectHideFlags: 0
@@ -857,7 +857,7 @@ Transform:
   m_GameObject: {fileID: 1186219564}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -615}
+  m_LocalPosition: {x: 0, y: 2, z: -619}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1704,7 +1704,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 119054014399927830, guid: fd4c526cd7583dd4db04b8da3c972684, type: 3}
       propertyPath: fireInterval
-      value: 0.2
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 911307960734822753, guid: fd4c526cd7583dd4db04b8da3c972684, type: 3}
       propertyPath: m_LocalPosition.x

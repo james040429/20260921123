@@ -19,7 +19,7 @@ public class FollowMouse3D : MonoBehaviour
     [SerializeField] private float minX = -85f;
     [SerializeField] private float maxX = 85f;
     [SerializeField] private float minZ = -660f;
-    [SerializeField] private float maxZ = 66f;
+    [SerializeField] private float maxZ = -200f;
 
     // FixedUpdate에서 사용하기 위해 마우스 목표 지점을 저장하는 변수
     private Vector3 targetPosition;

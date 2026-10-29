@@ -9,7 +9,7 @@ public class PlayerFire : MonoBehaviour
 
 
     [Header("발사 설정")]
-    public float fireInterval = 0.2f; // 발사 간격 (초 단위)
+    public float fireInterval = 0.6f; // 발사 간격 (초 단위)
     private bool isFiring = false;       // 현재 자동 발사 중인지 여부
     private Coroutine fireCoroutine;
 

@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         Enemy_Agent enemy = other.GetComponent<Enemy_Agent>();
         if (enemy != null && enemy._EnemyHealth != null)
         {
-            enemy._EnemyHealth.TakeDamage(10); // EnemyHealth 10 감소
+            enemy._EnemyHealth.TakeDamage(35); // EnemyHealth 10 감소
         }
 
         Destroy(gameObject);
