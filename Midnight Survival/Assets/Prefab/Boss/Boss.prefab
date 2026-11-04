@@ -93,39 +93,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5005331021552757955}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 583562110374858815}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
---- !u!1 &1423627907150594846 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
-  m_PrefabInstance: {fileID: 2234022738258198095}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &583562110374858815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423627907150594846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b2b67870549ac845b949cc6bf2f553d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PatternShooter
-  bulletPrefab: {fileID: 2213760340710178853, guid: 161a1c8c6e976524fbb2188c21f546d3, type: 3}
-  firePoints:
-  - {fileID: 1244892398003385457}
-  - {fileID: 5005331021552757955}
-  fireInterval: 3
-  fanBulletCount: 9
-  fanAngle: 90
-  scatterBulletCount: 30
-  scatterAngle: 60
-  angleVariance: 10
-  scatterShootDelay: 0.05
 --- !u!4 &1768347460402092452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b94c94bc8fcfaad4bbc52b3ab19397b0, type: 3}
